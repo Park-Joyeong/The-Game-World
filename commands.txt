@@ -1,0 +1,5 @@
+lein run
+
+lein uberjar 
+  => target\uberjar\gamewo....jar 
+  => java -jar uberjar\gamewo...-standalone.jar

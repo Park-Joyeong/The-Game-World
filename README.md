@@ -1,4 +1,4 @@
-# gameworld
+# Game World
 
 FIXME: description
 
