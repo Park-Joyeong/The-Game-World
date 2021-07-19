@@ -3,7 +3,8 @@
             [compojure.core :refer [GET defroutes]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [config.core :refer [env]]
-            [rum.core :refer [defc render-static-markup]])
+            [rum.core :refer [defc render-static-markup]]
+            [next.jdbc :as jdbc])
   (:gen-class))
 
 (defc template [headline component]
