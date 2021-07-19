@@ -9,7 +9,8 @@
                  [ring/ring-defaults "0.3.2"]
                  [yogthos/config "1.1.7"]
                  [rum "0.11.4"]
-                 [seancorfield/next.jdbc "1.1.588"]]
+                 [seancorfield/next.jdbc "1.1.588"]
+                 [org.postgresql/postgresql "42.2.11"]]
   :main ^:skip-aot gameworld.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all

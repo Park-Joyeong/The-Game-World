@@ -29,4 +29,5 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (run-jetty (wrap-defaults app site-defaults) {:port (:port env)}))
+  (let [datasource (jdbc/get-datasource (:db env))]
+    (run-jetty (wrap-defaults app site-defaults) {:port (:port env)})))
