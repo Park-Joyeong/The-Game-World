@@ -1,0 +1,2 @@
+# Run in PowerShell
+clj -A:run
