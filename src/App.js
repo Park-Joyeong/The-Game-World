@@ -1,35 +1,32 @@
 import React, { Fragment } from 'react';
+import { Route } from 'react-router-dom';
+import { LoginCallback } from '@okta/okta-react';
 import {
   CssBaseline,
-  withStyles
+  withStyles,
 } from '@material-ui/core';
 
 import AppHeader from './components/AppHeader';
 import Home from './pages/Home';
 
-const styles = theme => (
-  // TODO
+const styles = theme => ({
+  main: {
+    padding: theme.spacing(3),
+    [theme.breakpoints.down('xs')]: {
+      padding: theme.spacing(2),
+    },
+  },
+});
+
+const App = ({ classes }) => (
+  <Fragment>
+    <CssBaseline />
+    <AppHeader />
+    <main className={classes.main}>
+      <Route exact path="/" component={Home} />
+      <Route path="/login/callback" component={LoginCallback} />
+    </main>
+  </Fragment>
 );
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export default withStyles(styles)(App);

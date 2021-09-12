@@ -5,14 +5,14 @@ import {
     Typography,
 } from '@material-ui/core';
 
-const AppHeader = () => {
+const AppHeader = () => (
     <AppBar position="static">
         <Toolbar>
             <Typography variant="h6" color="inherit">
                 My React App
             </Typography>
         </Toolbar>
-    </AppBar>;
-};
+    </AppBar>
+);
 
 export default AppHeader;
